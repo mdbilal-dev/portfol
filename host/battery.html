@@ -1,0 +1,96 @@
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+#chain{
+font-size:100px;
+color:green;
+}
+
+
+#perc{
+font-size:100px;
+color:green;
+}
+
+
+h1{
+font-size:80px;
+color:green;
+}
+
+
+</style>
+</head>
+<body>
+<h1>Battery Meter</h1>
+<div id="chain" class="fa"></div>
+<span id="perc"></span>
+<script>
+
+
+function brakechain(){
+let chain=document.getElementById("chain");
+let perc=document.getElementById("perc");
+chain.innerHTML="&#xf244;";
+
+perc.innerHTML="0%";                                  //0%
+
+setTimeout(function(){
+chain.innerHTML="&#xf243;";
+},1000);
+
+
+setTimeout(function(){                               //25%
+perc.innerHTML="25%";
+},1000);
+
+
+
+
+setTimeout(function(){
+chain.innerHTML="&#xf242;";
+},2000);
+
+
+
+
+setTimeout(function(){                              //50%
+perc.innerHTML="50%";
+},2000);
+
+
+
+setTimeout(function(){
+chain.innerHTML="&#xf241;";
+},3000);
+
+
+
+setTimeout(function(){                               //75%
+perc.innerHTML="75%";
+},3000);
+
+
+setTimeout(function(){
+chain.innerHTML="&#xf240;";
+},4000);
+
+
+                                                       
+setTimeout(function(){                              //100%
+perc.innerHTML="100%";
+},4000);
+
+
+}
+brakechain();
+setInterval(brakechain,5000);
+
+</script>
+</body>
+</html>
